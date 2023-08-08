@@ -1,0 +1,45 @@
+.message {
+    color: #1a1a1a;
+    text-align: right;
+}
+.message-text {
+    display: inline-block;
+}
+
+.message-time {
+    display: inline-block;
+    margin-left: 10px;
+    padding-right: 10px;
+    color: #999;
+    font-size: 12px;
+}
+.messages {
+    margin-top: 45px;
+    color: #1a1a1a;
+    overflow-y: scroll;
+    z-index: 1002;
+    padding-left: 10px;
+}
+.input-group {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+.input {
+    border: none;
+    background-color: #f0f0f0;
+    color: #1a1a1a;
+    flex-grow: 1;
+    border-radius: 10px;
+}
+.btn-send {
+    background-color: #f0f0f0;
+    color: #1a1a1a;
+    border-radius: 10px;
+}
