@@ -8,7 +8,7 @@
 
 .message-time {
     display: inline-block;
-    margin-left: 10px;
+    margin-left: 5px;
     padding-right: 10px;
     color: #999;
     font-size: 12px;
@@ -19,7 +19,23 @@
     overflow-y: scroll;
     z-index: 1002;
     padding-left: 10px;
+    margin-bottom: 45px;
+    max-height: calc(92vh - 90px); /* высота блока будет равна высоте экрана минус высота заголовка и нижней части блока */
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f0f0f0;
+    padding-right: 10px; /* добавлено свойство для отступа справа */
 }
+.messages::-webkit-scrollbar {
+    width: 5px;
+}
+.messages::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+}
+.messages::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+
 .input-group {
     position: absolute;
     bottom: 0;
