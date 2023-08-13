@@ -1,9 +1,20 @@
 .message {
     color: #1a1a1a;
-    text-align: right;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
 }
 .message-text {
     display: inline-block;
+}
+.message-left {
+    display: flex;
+    justify-content: flex-start;
+}
+.message-right {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .message-time {
