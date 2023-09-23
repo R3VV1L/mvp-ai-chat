@@ -13,7 +13,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying ....'
-                sh 'rsync -avz dist/ root@r3vv1l.fvds.ru:/var/www/html/bot/'
+                sh 'mv dist/ /var/www/html/bot/'
             }
         }
     }
