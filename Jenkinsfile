@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                echo 'Building ....'
                 sh 'npm install'
                 sh 'npm run build'
             }
@@ -11,6 +12,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
+                echo 'Deploying ....'
                 sh 'rsync -avz build/ root@r3vv1l.fvds.ru:/var/www/html/bot/'
             }
         }
