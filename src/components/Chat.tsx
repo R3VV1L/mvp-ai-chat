@@ -25,7 +25,7 @@ export const Chat: React.FC<ChatProps> = ({ messages, onSendMessage }) => {
         const currentTime = getCurrentTime();
         onSendMessage(message, currentTime);
 
-        const url = 'http://sharon.drach.pro:8082';
+        const url = 'https://r3vv1l.fvds.ru:5173';
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -86,6 +86,7 @@ export const Chat: React.FC<ChatProps> = ({ messages, onSendMessage }) => {
             </div>
             <div className="input-group">
                 <input
+                    placeholder=" есть вопрос ?"
                     className="input"
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}

@@ -65,6 +65,10 @@
     flex-grow: 1;
     border-radius: 10px;
 }
+.input::placeholder {
+    padding: 5px;
+    color: #999999;
+}
 .btn-send {
     background-color: #f0f0f0;
     color: #1a1a1a;
