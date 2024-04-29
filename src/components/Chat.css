@@ -5,13 +5,16 @@
     align-items: center;
     margin-bottom: 10px;
 }
+
 .message-text {
     display: inline-block;
 }
+
 .message-left {
     display: flex;
     justify-content: flex-start;
 }
+
 .message-right {
     display: flex;
     justify-content: flex-end;
@@ -24,6 +27,7 @@
     color: #999;
     font-size: 12px;
 }
+
 .messages {
     margin-top: 45px;
     color: #1a1a1a;
@@ -31,17 +35,20 @@
     z-index: 1002;
     padding-left: 10px;
     margin-bottom: 45px;
-    max-height: calc(92vh - 90px); /* высота блока будет равна высоте экрана минус высота заголовка и нижней части блока */
+    max-height: calc(92vh - 90px);
     scrollbar-width: thin;
     scrollbar-color: #888 #f0f0f0;
-    padding-right: 10px; /* добавлено свойство для отступа справа */
+    padding-right: 10px;
 }
+
 .messages::-webkit-scrollbar {
     width: 5px;
 }
+
 .messages::-webkit-scrollbar-track {
     background-color: #f0f0f0;
 }
+
 .messages::-webkit-scrollbar-thumb {
     background-color: #888;
     border-radius: 5px;
@@ -58,6 +65,7 @@
     color: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
 }
+
 .input {
     border: none;
     background-color: #f0f0f0;
@@ -65,10 +73,12 @@
     flex-grow: 1;
     border-radius: 10px;
 }
+
 .input::placeholder {
     padding: 5px;
     color: #999999;
 }
+
 .btn-send {
     background-color: #f0f0f0;
     color: #1a1a1a;
