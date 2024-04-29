@@ -11,9 +11,8 @@ interface MessageData {
     time: string;
 }
 
-export const Chat: React.FC<ChatProps> = ({ messages, onSendMessage }) => {
+export const Chat: React.FC<ChatProps> = ({ onSendMessage }) => {
     const [message, setMessage] = useState('');
-    const [messageTimes, setMessageTimes] = useState<string[]>([]);
     const [messageData, setMessageData] = useState<MessageData[]>([]);
     const messagesRef = useRef<HTMLDivElement>(null);
 
@@ -38,13 +37,13 @@ export const Chat: React.FC<ChatProps> = ({ messages, onSendMessage }) => {
                 console.log(data);
                 setMessageData([
                     ...messageData,
+                    { message: message, time: currentTime },
                     { message: data.answer, time: getCurrentTime() },
                 ]);
             })
             .catch((error) => console.log(error));
 
         setMessage('');
-        setMessageTimes([...messageTimes, currentTime]);
     };
 
     const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
@@ -64,21 +63,18 @@ export const Chat: React.FC<ChatProps> = ({ messages, onSendMessage }) => {
         if (messagesRef.current) {
             messagesRef.current.scrollTop = messagesRef.current.scrollHeight;
         }
-    }, [messages]);
+    }, [messageData]);
 
     return (
         <div>
             <div className="messages" ref={messagesRef}>
-                {messages.map((msg, index) => (
-                    <div key={index} className="message-right">
-                        <span className="message-text">{msg}</span>
-                        <span className="message-time">
-                            {messageTimes[index]}
-                        </span>
-                    </div>
-                ))}
                 {messageData.map((data, index) => (
-                    <div key={index} className="message-left">
+                    <div
+                        key={index}
+                        className={
+                            index % 2 === 0 ? 'message-right' : 'message-left'
+                        }
+                    >
                         <span className="message-text">{data.message}</span>
                         <span className="message-time">{data.time}</span>
                     </div>
