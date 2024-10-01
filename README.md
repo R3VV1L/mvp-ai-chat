@@ -1,5 +1,6 @@
 # Проект коммуникационной информационной системы (на примере ФГБОУ ВО СГУ")
-![Languages](https://github-readme-stats.vercel.app/api/top-langs/?username={username}&theme=blue-green)
+![Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=r3vv1l&theme=blue-green)
+
 ИС обеспечивает следующие автоматизированные функции:
 -	автоматизация ответов студентам на часто задаваемые вопросы;
 -	автоматизация рассылок студентов о пересдачах.
